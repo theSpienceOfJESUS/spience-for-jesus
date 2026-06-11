@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPIENCE for Jesus — Science and Spirit Meet at Christ</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#C9A84C;--gold-light:#F0D080;--blue:#1B3A6B;--blue-mid:#2B5DA0;--white:#FAFAFA;--cream:#F5F0E8}
+body{font-family:Georgia,serif;background:var(--white);color:#2B2B2B;line-height:1.7}
+.hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-mid) 50%,var(--blue) 100%);padding:80px 24px 64px;text-align:center;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,.15) 0%,transparent 70%)}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);color:var(--gold-light);letter-spacing:.05em;margin-bottom:12px;position:relative}
+.hero h1 span{color:#fff}
+.tagline{font-size:clamp(.95rem,2.5vw,1.35rem);color:rgba(255,255,255,.85);max-width:620px;margin:0 auto 32px;position:relative}
+.cta-btn{display:inline-block;background:var(--gold);color:#fff;padding:16px 40px;border-radius:50px;font-size:1.1rem;text-decoration:none;font-weight:bold;box-shadow:0 4px 20px rgba(201,168,76,.4);border:2px solid var(--gold-light);transition:all .2s;position:relative}
+.cta-btn:hover{background:var(--gold-light);color:var(--blue);transform:translateY(-2px)}
+section{padding:64px 24px;max-width:860px;margin:0 auto}
+.shaded{background:var(--cream);max-width:100%;padding:64px 24px}
+.shaded .inner{max-width:860px;margin:0 auto}
+h2{font-size:clamp(1.4rem,3vw,2rem);color:var(--blue);margin-bottom:18px;border-bottom:3px solid var(--gold);padding-bottom:10px}
+.spience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:28px}
+.spience-card{background:#fff;border-radius:16px;padding:24px;border-left:5px solid var(--gold);box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.step-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);font-weight:bold;margin-bottom:8px}
+.spience-card h3{color:var(--blue);margin-bottom:6px;font-size:1.05rem}
+.teaching-list{display:grid;gap:14px;margin-top:28px}
+.t-item{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:12px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.num{background:var(--blue);color:var(--gold-light);font-weight:bold;font-size:.85rem;min-width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.t-item p{font-size:.93rem;margin:0}
+.pray-box{background:var(--blue);color:#fff;border-radius:16px;padding:32px;margin:32px 0}
+.pray-box h3{font-size:1.2rem;color:var(--gold-light);margin-bottom:12px}
+.pray-box p{font-size:.95rem;font-style:italic}
+.founder-note{background:var(--cream);border-radius:16px;padding:28px;border-top:4px solid var(--gold);margin:28px 0;font-size:.93rem}
+.f-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);margin-bottom:10px;font-weight:bold}
+.companion-link{display:block;text-align:center;background:var(--blue);color:var(--gold-light);padding:22px 24px;border-radius:16px;margin:28px 0;text-decoration:none;font-size:1rem;transition:all .2s}
+.companion-link:hover{background:var(--blue-mid);transform:translateY(-1px)}
+.offer-wrap{padding:48px 24px;max-width:860px;margin:0 auto}
+.offer-box{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-mid) 100%);border-radius:24px;padding:48px 36px;text-align:center;border:2px solid var(--gold);box-shadow:0 8px 40px rgba(27,58,107,.25)}
+.offer-box h2{color:var(--gold-light);border-color:rgba(240,208,128,.3);margin-bottom:8px}
+.coming-badge{display:inline-block;background:var(--gold);color:#fff;font-size:.78rem;font-weight:bold;letter-spacing:.12em;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin-bottom:20px}
+.price{font-size:3.2rem;font-weight:bold;color:var(--gold-light);margin:12px 0 4px}
+.price-sub{font-size:.88rem;color:rgba(255,255,255,.65);margin-bottom:28px}
+.includes-list{text-align:left;max-width:480px;margin:0 auto 32px;display:grid;gap:10px}
+.inc-item{display:flex;gap:12px;align-items:flex-start;color:rgba(255,255,255,.88);font-size:.92rem}
+.inc-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px}
+.notify-box{background:rgba(255,255,255,.08);border:1px solid rgba(240,208,128,.3);border-radius:16px;padding:28px;margin-bottom:24px}
+.notify-box p{color:rgba(255,255,255,.8);font-size:.92rem;margin-bottom:16px}
+.notify-link{display:inline-block;background:var(--gold);color:#fff;padding:14px 36px;border-radius:50px;font-size:1rem;font-weight:bold;text-decoration:none;box-shadow:0 4px 20px rgba(201,168,76,.4);border:2px solid var(--gold-light);transition:all .2s}
+.notify-link:hover{background:var(--gold-light);color:var(--blue);transform:translateY(-2px)}
+.family-code{background:rgba(255,255,255,.07);border-radius:12px;padding:18px;margin-top:20px;font-size:.86rem;color:rgba(255,255,255,.75);border:1px solid rgba(240,208,128,.2)}
+.family-code strong{color:var(--gold-light)}
+footer{background:var(--blue);color:rgba(255,255,255,.55);text-align:center;padding:28px 24px;font-size:.78rem}
+footer a{color:var(--gold-light);text-decoration:none}
+@media(max-width:600px){.hero{padding:60px 16px 48px}.offer-box{padding:32px 18px}}
+</style>
+</head>
+<body>
 
+<div class="hero">
+  <h1>SPIENCE <span>for Jesus</span></h1>
+  <p class="tagline">Science and Spirit meet at Jesus Christ. Learn to use AI the right way — anchored in faith, guided by the Holy Ghost.</p>
+  <a href="#offer" class="cta-btn">See the Playbooks of Christ →</a>
+</div>
+
+<section>
+  <h2>What Is the SPIENCE Method?</h2>
+  <p>Think of a bridge. On one side is everything science is learning about the brain, the body, and the world. On the other side is Jesus Christ and His teachings. SPIENCE is the bridge. Every playbook follows three steps:</p>
+  <div class="spience-grid">
+    <div class="spience-card"><div class="step-label">Step 1 — Science</div><h3>Name the Wound</h3><p>What does research say is broken or hard about this area of life?</p></div>
+    <div class="spience-card"><div class="step-label">Step 2 — Spirit</div><h3>Show How Jesus Solved It</h3><p>How did the Savior model the answer in His own life and ministry?</p></div>
+    <div class="spience-card"><div class="step-label">Step 3 — Practice</div><h3>One Combined Step</h3><p>A simple, practical thing you can do today that honors both science and scripture.</p></div>
+  </div>
+</section>
+
+<section class="shaded">
+  <div class="inner">
+    <h2>What a Global Apostle Teaches About AI</h2>
+    <p>Elder Gerrit W. Gong, an Apostle in a global Christian faith, released a one-hour teaching in June 2026 — <em>"Faith, Dignity and Human Flourishing: Hearing God's Voice in an Age of Artificial Intelligence."</em> Here are the 20 most important things he teaches:</p>
+    <div class="teaching-list">
+      <div class="t-item"><div class="num">1</div><p><strong>AI answers questions. Only God answers prayers.</strong> A search engine finds facts. Only your Father in Heaven finds you.</p></div>
+      <div class="t-item"><div class="num">2</div><p><strong>AI organizes information — but it cannot give you revelation, covenant connection, or divine truth.</strong> Those come only from God.</p></div>
+      <div class="t-item"><div class="num">3</div><p><strong>God never hallucinates.</strong> He never makes things up. He always tells the truth. No AI can say the same.</p></div>
+      <div class="t-item"><div class="num">4</div><p><strong>Don't let AI shape your picture of God.</strong> Learn who He truly is through His Word and through the Spirit in your heart.</p></div>
+      <div class="t-item"><div class="num">5</div><p><strong>You are not a data point.</strong> You are a beloved child of God. No machine can measure your divine potential.</p></div>
+      <div class="t-item"><div class="num">6</div><p><strong>"Let AI inform, but you decide with the Lord."</strong> Your identity and your agency are sacred — they belong to you and God, not to an algorithm.</p></div>
+      <div class="t-item"><div class="num">7</div><p><strong>AI carries human bias.</strong> Faith leaders are needed to help anchor it with a moral compass.</p></div>
+      <div class="t-item"><div class="num">8</div><p><strong>Three guideposts for disciples using AI:</strong> Rely on the Spirit first. Practice wisdom second. Choose trusted sources third.</p></div>
+      <div class="t-item"><div class="num">9</div><p><strong>AI affects all four of your most important relationships</strong> — with God, yourself, others, and nature. Use it to deepen all four. Don't let it replace any one.</p></div>
+      <div class="t-item"><div class="num">10</div><p><strong>No one should sit alone with a chatbot.</strong> If you confide more in AI than in a friend — reach out to a real person today.</p></div>
+      <div class="t-item"><div class="num">11</div><p><strong>"Discipleship is a covenant journey. AI is a tool."</strong> A hammer helps build a house. But the hammer is never the home.</p></div>
+      <div class="t-item"><div class="num">12</div><p><strong>Use AI for logistics and drafts — not as a replacement for real relationships.</strong> Let it help you plan. Then spend your best energy with people.</p></div>
+      <div class="t-item"><div class="num">13</div><p><strong>Don't let AI do the work meant to help you grow.</strong> What you don't earn yourself, you don't keep in your soul.</p></div>
+      <div class="t-item"><div class="num">14</div><p><strong>Write these three truths where you see them daily:</strong> I am a child of God. I am a child of the covenant. I am a disciple of Jesus Christ.</p></div>
+      <div class="t-item"><div class="num">15</div><p><strong>As AI gets smarter at thinking, we must get better at being human</strong> — faith, compassion, love, humility, empathy, forgiveness.</p></div>
+      <div class="t-item"><div class="num">16</div><p><strong>Get off your phone and go outside.</strong> God's classroom is in creation. Nature teaches patience and joy in ways no screen ever can.</p></div>
+      <div class="t-item"><div class="num">17</div><p><strong>"May we never lose the divine intelligence that matters most: the voice of God."</strong> In a world of noise, learn to hear His whisper first.</p></div>
+      <div class="t-item"><div class="num">18</div><p><strong>Anyone, anywhere has the possibility to become anything.</strong> AI should expand this gift — not limit it.</p></div>
+      <div class="t-item"><div class="num">19</div><p><strong>Use the gift of the Holy Ghost to discern what is real vs. unreal.</strong> Pray before you share. Pray before you trust a source.</p></div>
+      <div class="t-item"><div class="num">20</div><p><strong>"Please choose wisely to follow Jesus Christ."</strong> No generation in history ever needed Him less. Ours is no different.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Which AI Tool Is Right for You?</h2>
+  <p>There are many AI tools available today. Rather than telling you which one to use, we believe the most important first step is to ask God.</p>
+  <div class="pray-box">
+    <h3>A Simple Invitation</h3>
+    <p>Before you download any AI tool, find a quiet moment. Ask your Father in Heaven: "Which of these tools will help me come closer to Thee and serve Thy children better?" Then listen. The Holy Ghost will guide you.</p>
+  </div>
+  <div class="founder-note">
+    <div class="f-label">A Personal Note from the Founder</div>
+    <p>I personally feel that Anthropic's Claude has been one of the best AI tools for faith-centered work, and I believe it will continue to be among the best tools available until the Lord comes again. I plan to stay current with every Claude update so I can help you understand and use it well. <strong>This is my personal feeling — it is not doctrine, and it is not a canonized belief of any church.</strong> Other tools may serve you better. Pray about each one, and let the Spirit lead.</p>
+  </div>
+  <a href="https://www.comeuntochrist.org" class="companion-link" target="_blank" rel="noopener">
+    📖 Looking for the Best Bible Companion Book? Get a Free Copy Here →
+  </a>
+</section>
+
+<div class="offer-wrap" id="offer">
+  <div class="offer-box">
+    <div class="coming-badge">⭐ Launching June 15, 2026</div>
+    <h2>Playbooks of Christ</h2>
+    <div class="price">$40</div>
+    <div class="price-sub">per month · 7-day free trial · cancel anytime</div>
+    <div class="includes-list">
+      <div class="inc-item"><div class="inc-dot"></div><p>One new SPIENCE Playbook every week — plain, faith-anchored, done in 15 minutes</p></div>
+      <div class="inc-item"><div class="inc-dot"></div><p>Starter Vault of 3 playbooks the day you join</p></div>
+      <div class="inc-item"><div class="inc-dot"></div><p>Ask Anything — one question per month answered personally</p></div>
+      <div class="inc-item"><div class="inc-dot"></div><p>No tech background needed — if you can follow a recipe, you can follow a playbook</p></div>
+    </div>
+    <div class="notify-box">
+      <p>Enrollment opens June 15. Watch the free YouTube channel now and be the first to know when the door opens.</p>
+      <a href="https://www.youtube.com/@TheSpienceOfJESUS" class="notify-link" target="_blank" rel="noopener">Watch Free on YouTube →</a>
+    </div>
+    <div class="family-code">🌿 <strong>Family and Friends:</strong> Use code <strong>HOLLADAYFRIENDS</strong> at checkout for a 30-day free trial when enrollment opens.</div>
+  </div>
+</div>
+
+<footer>
+  <p>SPIENCE for Jesus &copy; 2026 — Founded by Camden Holladay &nbsp;|&nbsp; <a href="https://www.youtube.com/@TheSpienceOfJESUS">YouTube @TheSpienceOfJESUS</a></p>
+  <p style="margin-top:8px;font-size:.73rem">Personal opinions expressed are not doctrine of any church. All AI tools mentioned are tools only. This site is not affiliated with any AI company.</p>
+</footer>
+
+</body>
+</html>
